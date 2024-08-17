@@ -34,6 +34,13 @@ class db{
         }
     }
 
+    getInstance(){
+        if (!this.sequelizeInstance) {
+            this.initialize();
+        }
+        return this.sequelizeInstance;
+    }
+
 }
 
 module.exports = new db()
